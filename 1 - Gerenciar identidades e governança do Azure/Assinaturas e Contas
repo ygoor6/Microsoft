@@ -1,0 +1,53 @@
+############# Assinaturas e Contas #############
+    Regiões
+        Três ou mais datacenters com uma certa distância entre si
+        Pareadas para alta disponibilidade
+        Todas regiões possuem uma região par
+
+    Azure Subscription (assinatura)
+        Toda subscription tem que estar atrelada a uma conta
+        Conta > Assinatura
+
+    Como obter uma subscription
+        Enterprise Agreement (EA) compromisso monetário inicial e consomem serviços ao longo do ano
+        Revendedores fornecem uma maneira simples e flexível de adquirir serviços em nuvem
+        Parceiros podem projetar e implementar sua soluçao de nuvem do Azure
+        Conta pessoal gratuita
+
+    Uso da subscription
+        Free - Inclui o cŕedito de 200$ por 30 dias
+        Pay as you go - Pague conforme o uso
+        CSP - Parceiro
+        Enterprise - Contrato com a Microsoft
+        Student - Inclui crédito de 100$ por 12 meses
+
+    Criando grupos de recursos
+        Recursos só podem existir em um grupo de recursos
+        Grupos podem ter recursos de vários tipos (serviços) e de regiões diferentes
+        Grupos não podem ser renomeados ou aninhados
+        Bloqueios de grupos podem impedir alterações nos recuros
+        Pode mover recursos entre grupos e subscriptions
+
+    Limites de recursos
+        Recursos possuem limite padrão (quota)
+        Útil para rastrear o uso atual e planejar o uso futuro
+        Em caso de exceder o limite, pode abrir um caso no suporte Microsoft para aumentar os limites máximos
+
+    Criar uma hierarquia de recursos do Azure
+        Grupos de gerenciamento fornecem um nível de escopo acima das assinaturas
+        Implementar regras e custos por organização (equipes)
+        Root Management Group > Subscription
+
+    Aplicar marcação de recursos (tags)
+        Organiza logicamente os recursos
+        Consiste em um par nome-valor
+        Útil para acumular informações de faturamento
+
+    Gerenciamento de custos
+        Custos são específicos do recurso
+        Alertas, orçamentos e recomendações
+        Exportar os dados (avaliar pelo Azure Advisor)
+        Azure Reservations - ajuda a economizar o dinheiro pagando antecipadamente pelos serviços
+        Azure Hybrid Benefits - user licenças locais
+        Azure Credits - benefício mensal de crédito que permite experimentar, desenvolver e testar novas soluções no Azure
+        Regions - escolha locais e regiões de baixo custo

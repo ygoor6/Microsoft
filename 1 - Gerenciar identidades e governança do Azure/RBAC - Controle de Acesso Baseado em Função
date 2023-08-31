@@ -1,0 +1,35 @@
+RBAC - Role Access 
+    Controle de Acesso Baseado em Função (RBAC)
+        Security principal: Objeto que representa algo que está solicitando acesso aos recursos
+        Role definition: Coleção das permissões que lista as operações que podem ser executadas
+        Scope: Limite para o nível de acesso solicitado
+        Assignment: Definição de função a um objeto de segurança
+            Os usuários podem conceder acesso descrito em uma definição de função, criando uma atribuição
+            Negar atribuições atualmente são somente leitura e são definidas pelo Azure Blueprints e pelos Azure Managed Apps
+
+    Definição de função
+        Coleção de permissões que lista as operações que podem ser executadas
+        Owner: possui plenos poderes, permite outros colaboradores dentro do resource groups, resources e subscription
+        Contributor: possui plenos poderes de criação, deleção e outros, mas não consegue dar permissão à outros
+        Reader: somente leitura, olha tudo mas não altera nada
+
+    Atribuição de função
+        Processo de associação de uma definição de função a um usuário, grupo ou entidade de serviço em um escopo com a finalidade de conceder acesso
+
+    Funções do RBAC do Azure vs Funções do Azure AD
+        RBAC: Gerenciar acesso aos recursos do Azure
+        Azure AD: Gerenciar acesso aos objetos do Azure AD
+        RBAC: O escopo pode ser especificado em vários níveis
+        Azure AD: O escopo está no nível do locatário
+        RBAC: As informações de função podem ser acessadas no portal do Azure, Azure CLI, Azure PowerShell, ARM templates, REST API
+        Azure AD: Portal do Azure, 365 admin portal, Graph, Azure AD PowerShell for Graph
+
+    Autenticação RBAC
+        Permissionamento a recursos
+        Usuário do AD, acesso ao Active Directory
+
+    Funções RBAC
+        Owner: Acesso total aos recursos e pode delegar acesso a outros
+        Contributor: Cria e gerencia todos os tipos de recursos do Azure, mas não pode conceder acesso a outros
+        Reader: Visualiza recursos do Azure
+        User Access Administrator: Gerencia o acesso do usuário aos recursos do Azure

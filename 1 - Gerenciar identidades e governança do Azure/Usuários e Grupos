@@ -1,0 +1,27 @@
+############# Usuários e Grupos #############
+    Criar contas de usuários
+        Todos os usuários devem ter uma conta
+        A conta é usada para autenticação e autorização
+        Origem: nuvem, sincronizado com diretório e convidado (leva para on-premises apenas senha)
+
+    Gerenciar contas de usuário
+        Criar ou convidar
+        Permissão de admin global ou usuários para gerenciar
+        Usuários podem ser restaurados por 30 dias
+
+    Criar contas em massa (Bulk Create, Invite ou Delete)
+        Criar modelo de valores separados por vírgula (CSV)
+        Deve estar conectado como admin global ou usuário
+
+    Criar contas de grupo
+        Tipos de Grupos:
+            Segurança
+            Microsoft 365 (podem ser programados para serem excluídos a partir de 30 dias)
+        Tipos de Atribuição: Atribuído, Usuário dinâmico, Dispositovo dinâmico (somente grupos de segurança)
+
+    Atribuir licenças a usuários e grupos
+        Necessário atribuir o parâmetro de local de uso (usage location)
+
+    Criar Unidades Administrativas
+        Criar uma função com permissões apropriadas com escopo para a unidade administrativa
+        Disponível apenas para as licenças -> Azure AD Premium P1 ou P2 para cada Administrador de Função Privilegiada ou Global

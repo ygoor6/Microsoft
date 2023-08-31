@@ -1,0 +1,20 @@
+############# Azure Policy #############
+    Política do Azure
+            Remediação
+                Criar uma policy para ajustar o que já está incorreto
+        Tipos de recursos permitidos - especifique os tipos de recursos que podem ser implantados
+        SKUs de VM permitidas - especifique o conjunto de SKU de VM que podem ser implantados
+        Locais permitidos - retrinja os locais que podem ser implantados
+        Exigir tag e seu valor - aplicar ma tag obrigatória e seu valor
+        Auditar se o serviço de Backup do Azure está habilitado para todas as VMs
+
+    Definições de Política
+        Definições disponíveis do Azure
+        Importar do GitHub
+        Formato JSON específico
+        Criar definições de políticas personalizadas
+
+    Definições de Iniciativa
+        Grupo de políticas (1 ou mais políticas)
+
+    Determinar a conformidade
