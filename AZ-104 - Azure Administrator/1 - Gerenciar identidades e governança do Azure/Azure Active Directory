@@ -37,7 +37,7 @@ Azure Active Directory
 
         Premium P2
             Identity Protection
-                Detecção e correção de riscos, após avaliação de um usuário dentro do ambiente.
+                Detecção e correção de riscos, após avaliação de um usuário dentro do ambiente. Garantir que o usuário é quem ele diz.
 
             Identity Governance
                 
@@ -49,7 +49,24 @@ Azure Active Directory
     
     Implementar a redefinição de senha de autoatendimento
         Métodos requeridos para reset - 1 ou 2 (e-mail, telefone, perguntas)
-        Quantos métodos podem ser requeridos - 3 à 5
+        Número de questões requeridas para o registro - 3 à 5
+        Número de questões requeridas para o reset - 3 à 5
         
-        Quais os tipos de domain name
-        TXT ou MX
+
+    Domain Name
+
+        Tipos de domain name aceitos pela Azure:
+            TXT
+            MX
+
+    Microsoft Intune
+        É uma solução de gerenciamento de ponto de extremidadade baseado em nuvem. Ele gerencia o acesso do usuário e simplifica o gerenciamento de aplicativos e dispositivos em vários dispositivos, computadores desktop, dispositivos móveis e pontos de extremidadade virtuais.
+
+    Tenant Microsoft
+        Um tenant (locatário) é uma instância dedicada dos serviçoes do Microsoft 365 e dos dados da organização armazenados em um local padrão específico, como Europa ou América do Norte.
+
+        Cada tenant do Microsoft 365 é distinto, exclusivo e separado de todos os outros locatários do Microsoft 365.
+
+        O locatário do Microsoft 365 também inclui um locatário do Azure Active Directory (Azure AD), que é uma instância dedicada de Azure AD para contas de usuário, grupos e outros objetos.
+
+            Obs.: Se for criado um novo Tenant, o dono terá toda permissão no novo locatário, mas os outros usuários não terão as permissões de outro locatário.
