@@ -1,13 +1,16 @@
-############# Usuários e Grupos #############
+Usuários e Grupos
+
     Criar contas de usuários
         Todos os usuários devem ter uma conta
         A conta é usada para autenticação e autorização
         Origem: nuvem, sincronizado com diretório e convidado (leva para on-premises apenas senha)
+        Conta nativa de nuvem, não é sincronizado com o AD DS
 
     Gerenciar contas de usuário
         Criar ou convidar
         Permissão de admin global ou usuários para gerenciar
         Usuários podem ser restaurados por 30 dias
+        As informações de login e log de auditoria estão disponíveis
 
     Criar contas em massa (Bulk Create, Invite ou Delete)
         Criar modelo de valores separados por vírgula (CSV)
@@ -15,13 +18,50 @@
 
     Criar contas de grupo
         Tipos de Grupos:
-            Segurança
-            Microsoft 365 (podem ser programados para serem excluídos a partir de 30 dias)
-        Tipos de Atribuição: Atribuído, Usuário dinâmico, Dispositovo dinâmico (somente grupos de segurança)
+            Segurança:
+                São usados para gerenciar oa cesso de membros e computadores a recursos compartilhados para um grupo de usuário. Pode ser usado para criar um grupo de segurança para uma política de segurança específica e aplicar as mesmas permissões a todos os membros de um grupo.
+
+                Use grupos de segurança para definir permissões para todos os membros do grupo ao mesmo tempo, em vez de adicionar permissões a cada membro individualmente.
+
+                Os grupos de segurança só podem ser implementados por um administrador do Azure AD.
+
+            Microsoft 365:
+                Oferecem oportunidades de colaboração, os membros do grupo têm acesso a uma caixa de correio compartilhada, calendário, arquivos, site do SharePoint- (podem ser programados para serem excluídos a partir de 30 dias).
+
+                Adicione grupos do Microsoft 365 para habilitar o acesso a grupos para usuários convidados fora da sua organização de Azure AD.
+
+                Usuários normais e administradores do Azure AD podem usar grupos do Microsoft 365.
+
+            Ao adicionar um membro a um grupo, tem diferentes maneiras de atribuiar direitos de acesso de membro.
+
+                Tipos de atribuição ou direitos de acesso
+                Atribuído:
+                    Adicione usuários específicos como membros de um grupo, em que cada usuário pode ter permissões exclusivas - (trabalho manual).
+
+                Usuário dinâmico:
+                    Use regras de associação dinâmica para adicionar e remover membros de grupo automaticamente. Quanto os atributos de membro mudam, o Azure examina as regras dinâmicas de grupo de diretório.
+                    - Se os atributos de membro atenderem aos requisitos de regra, o membro será adicionado ao grupo.
+                    - Se os atributos de membro não atenderem mais aos requisitos de regra, o membro será removido.
+
+                    Pode ser usado com job title específico ou um local específico.
+
+                Dispositovo dinâmico (somente grupos de segurança):
+                    Aplique regras de grupo dinâmico para adicionar e remover dispositivos automaticamente em grupos de segurança. Quando os atributos de dispositivo mudam, o Azure examina as regras dinâmicas de grupo do diretório.
 
     Atribuir licenças a usuários e grupos
-        Necessário atribuir o parâmetro de local de uso (usage location)
+        Necessário atribuir o parâmetro de local de uso (usage location), para dar um ponto de partida para que o Azure consiga realizar um comparativo aos logins autenticações na conta do usuário.
+
+        Definir o parâmetro de local de uso, pois ao atribuir a licença P2 irá apresentar erro sem o usage location.
+
+        - O Azure AD vem como um serviço gratuito, que pode obter a funcionalidade adicional com licença P1 ou P2.
+
+        Serviços adicionaois (como o O365 são serviços de nuvem pagos):
+            - Os serviços de nuvem pagos da Microsoft exigem licenças
+            - As licenças são atribuídas a quem precisa de acesso aos serviços
+            - Cada usuário ou grupo requer uma licença paga separada
+            - Os administradores usam portais de gerenciamento e cmdlets do PowerShell para gerenciar licenças
 
     Criar Unidades Administrativas
-        Criar uma função com permissões apropriadas com escopo para a unidade administrativa
-        Disponível apenas para as licenças -> Azure AD Premium P1 ou P2 para cada Administrador de Função Privilegiada ou Global
+        Exemplo de uma empresa com várias filiais e apenas uma sede, para administrar todas as áreas de maneira descentralizada, podem ser criadas várias unidades administrativas de acordo com cada local da empresa
+
+        - Para criar uma unidade administrativa precisa ter uma licença P1 ou P2 para cada Administrador de Função Privilegiada ou Administrador Global
