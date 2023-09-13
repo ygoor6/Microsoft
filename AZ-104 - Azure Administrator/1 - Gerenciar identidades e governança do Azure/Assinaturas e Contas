@@ -1,53 +1,136 @@
-############# Assinaturas e Contas #############
+Assinaturas e Contas
     Regiões
-        Três ou mais datacenters com uma certa distância entre si
-        Pareadas para alta disponibilidade
-        Todas regiões possuem uma região par
+        O Azure composto por datacenters espalhados pelo mundo, organizados e disponibilizados aos usuários por região. Uma região é uma área geográfica do planeta que contém, no mínimo um, mas potencialmnete vários datacenters, que estão próximos em uma rede de baixa latência.
+        
+        - O Azure está em disponibilidade geral em mais de 60 regiões em 140 países.
+        - O Azure tem mais regiões globais do que qualquer outro provedor de nuvem.
+
+        Características
+            Isolamento físico:
+                No mínimo 300 milhas de separação entre datacenters em um par regional, para mitigar problemas por desastres naturais, conflitos civis, quedas de energia.
+            
+            Replicação fornecedida pela plataforma:
+                Alguns serviços, como o armazenamento com redundância geográfica, fornecem replicação automática para a região emparelhada.
+
+            Ordem de recuperação da região:
+                Em caso de interrupção generalizada, é priorizada a recuperação de uma região de cada par.
+            
+            Atualizações sequenciais:
+                As atualizações são distribuídas em regiões emparelhadas sequencialmente (não ao mesmo tempo).
+
+            Residência de dados:
+                As regiões residem na mesma geografia que o conjunto habilitado (exceto Brasil e Cingapura).
+
 
     Azure Subscription (assinatura)
-        Toda subscription tem que estar atrelada a uma conta
-        Conta > Assinatura
+        Uma assinatura é uma unidade lógica de serviços do Azure que está vinculada a uma conta do Azure. Uma conta é uma identidade no Azure AD (Entra ID) ou um diretório de confiança.
+
+        As assinaturas ajudam a organizar o acesso aos recursos de nuvem do Azure e a controlar como o uso dos recursos é relatado, cobrado e pago.
+
+        - Cada serviço Azure pertence a uma assinatura.
+        - Cada assinatura pode ter uma configuração de cobrança e pagamento diferente.
+        - Várias assinaturas podem ser vinculadas à mesma conta do Azure.
+        - Várias contas podem ser vinculadas à mesma assinatura.
+        - Se uma conta do Azure for a única associada a uma assinatura, ela será responsável pela cobrança.
+
 
     Como obter uma subscription
-        Enterprise Agreement (EA) compromisso monetário inicial e consomem serviços ao longo do ano
-        Revendedores fornecem uma maneira simples e flexível de adquirir serviços em nuvem
-        Parceiros podem projetar e implementar sua soluçao de nuvem do Azure
-        Conta pessoal gratuita
+        Enterprise Agreement (Contrato Enterprise):
+            Os clientes fazem um compromisso monetário inicial e consomem serviços ao longo do ano.
+
+        Revendedor da Microsoft:
+            Fornecem uma maneira simples e flexível de adquirir serviços em nuvem por meio do programa Open Licensing.
+
+        Parceiro da Microsoft:
+            Parceiros Microsoft com experiência de negócios e de tecnologia que ajudam a projetar e implementar a solução na nuvem Azure.
+
+        Conta gratuita:
+            Qualquer usuário pode se inscrever para obter uma conta gratuita por 30 dias.
+        
 
     Uso da subscription
-        Free - Inclui o cŕedito de 200$ por 30 dias
-        Pay as you go - Pague conforme o uso
-        CSP - Parceiro
-        Enterprise - Contrato com a Microsoft
-        Student - Inclui crédito de 100$ por 12 meses
+        Free:
+            Inclui o crédito de 200$ para gastar em qualquer serviço por 30 dias. Acesso gratuito aos mais populares serviços por 12 meses.
+
+        Pay as you go:
+            Uma assinatura PAYG (Pagamento Conforme o Uso) cobra você mensalmente pelos serviços usados no período de cobrança em questão.
+
+        CSP - Parceiro:
+            Modelo voltado a um parceiro da Microsoft, típico de pequenas e médias empresas.
+
+        Enterprise - Contrato com a Microsoft:
+            Oferece flexibilidade para comprar serviços de nuvem e licenças de software em um único contrato. O contrato vem com descontos para novas licenças e o Software Assurance. Esse tipo de assinatura tem como destino organizações de escala empresarial.
+
+        Student:
+            Inclui crédito de 100$ por 12 meses.
+            - Os alunos podem selecionar serviços gratuitos sem fornecer um cartão de crédito durante o processo de inscrição.
+            - Precisa confirmar seu status de aluno por meio de seu endereço de email organizacional.
 
     Criando grupos de recursos
-        Recursos só podem existir em um grupo de recursos
-        Grupos podem ter recursos de vários tipos (serviços) e de regiões diferentes
-        Grupos não podem ser renomeados ou aninhados
-        Bloqueios de grupos podem impedir alterações nos recuros
-        Pode mover recursos entre grupos e subscriptions
+        Um grupo de recursos (Resource Group) é um contêiner lógico que manteḿ os recursos relacionados a uma solução do Azure.
+
+        - Recursos só podem existir em um grupo de recursos
+        - Grupos podem ter recursos de vários tipos (serviços) e de regiões diferentes
+        - Grupos não podem ser renomeados ou aninhados
+        - Bloqueios de grupos podem impedir alterações nos recuros
+        - Pode mover recursos entre grupos e subscriptions
 
     Limites de recursos
-        Recursos possuem limite padrão (quota)
-        Útil para rastrear o uso atual e planejar o uso futuro
-        Em caso de exceder o limite, pode abrir um caso no suporte Microsoft para aumentar os limites máximos
+        Muitos serviços do Azure têm cotas, que são o número atribuído de recursos da sua assinatura do Azure. Cada cota representa um recurso contável específico, como o número de máquinas virtuais que você pode criar, o número de contas de armazenamento que pode usar simultaneamente, o número de recursos de rede que pode consumir ou o número de chamadas de API para um determinado serviço que pode fazer.
+
+        - Recursos possuem limite padrão (quota)
+        - Útil para rastrear o uso atual e planejar o uso futuro
+        - Em caso de exceder o limite, pode abrir um caso no suporte Microsoft para aumentar os  limites máximos
 
     Criar uma hierarquia de recursos do Azure
-        Grupos de gerenciamento fornecem um nível de escopo acima das assinaturas
-        Implementar regras e custos por organização (equipes)
-        Root Management Group > Subscription
+        Uma hierarquia de recursos organiza os recursos na nuvem, a fim de proteger, gerenciar e acompanhar os custos relacionados às cargas de trabalho.
+
+        A Azure fornece quatro níveis de gerenciamento:
+            Grupos de gerenciamento:
+                Gerencia o acesso, a política e a conformidade de várias assinaturas. Todas as assinaturas em um grupo de gerenciamento herdam automaticamente as condições aplicadas ao grupo de gerenciamento.
+
+                Grupos de gerenciamento fornecem um nível de escopo acima das assinaturas.
+
+            Assinatura (subscription):
+                Associam logicamente as contas de usuário aos recursos que elas criam. Cada assinatura tem limites ou cotas na quantidade de recursos que pode criar e usar. As organizações podem usar assinaturas para gerenciar os custos e os recursos criados por usuários, equipes e projetos.
+
+            Grupos de recursos (Resources Groups):
+                São contêineres lógicos em que você pode implantar e gerenciar recursos do Azure, como aplicativos Web, bancos de dados e contas de armazenamento.
+            Recursos (Resources):
+
+        - Grupos de gerenciamento fornecem um nível de escopo acima das assinaturas
+        - Implementar regras e custos por organização (equipes)
+        - Root Management Group > Subscription
 
     Aplicar marcação de recursos (tags)
-        Organiza logicamente os recursos
-        Consiste em um par nome-valor
-        Útil para acumular informações de faturamento
+        É possível e recomendável aplicar marcas (tags) aos recursos para organizá-los por categorias. São úteis para classificar, pesquisar, gerenciar e fazer análises.
+
+        Cada tag é composta por um nome e um valor, exemplo: Uma tag com nome "server" e o valor "production" ou "development".
+
+        - Organiza logicamente os recursos
+        - Consiste em um par nome-valor
+        - Útil para acumular informações de faturamento
 
     Gerenciamento de custos
-        Custos são específicos do recurso
-        Alertas, orçamentos e recomendações
-        Exportar os dados (avaliar pelo Azure Advisor)
-        Azure Reservations - ajuda a economizar o dinheiro pagando antecipadamente pelos serviços
-        Azure Hybrid Benefits - user licenças locais
-        Azure Credits - benefício mensal de crédito que permite experimentar, desenvolver e testar novas soluções no Azure
-        Regions - escolha locais e regiões de baixo custo
+        O Azure tem várias opções que podem ajudar a obter uma economia significativa de custos para a organização.
+
+        - Custos são específicos do recurso
+        - Alertas, orçamentos e recomendações
+        - Exportar os dados (avaliar pelo Azure Advisor)
+
+        Reservas (Reservations):
+            Econimize pagando antecipadamente. Sendo possível pagar por 1 ou 3 anos de máquina virtual, capacidade de computação do banco de dados SQL, Cosmos DB entre outros.
+
+            Reduz em até 72% o valor em comparação ao conforme o uso.
+
+        Benefícios Híbridos do Azure (Hybrid Benefits):
+            Economize caso tenha uma licença que inclua o Software Assurance, ou seja, com licenças locais de Windows Server ou SQL Server durante a migração para o Azure.
+
+        Créditos do Azure (Credits):
+            Benefício de crédito mensal para desenvolver, testar e experimentar novas soluções do Azure.
+
+        Regiões do Azure:
+            Compare preços de serviços entre regiões, os preços podem variar de uma região para outra, mesmo nos EUA.
+
+        Calculadora de Preços:
+            Fornece estimativas em todas as áreas do Azure, incluindo computação, rede, armazenamento, web e banco de dados.
