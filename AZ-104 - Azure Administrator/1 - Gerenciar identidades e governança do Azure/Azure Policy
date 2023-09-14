@@ -1,20 +1,47 @@
-############# Azure Policy #############
+Azure Police
     Política do Azure
+        É um serviço do Azure que permite criar, atribuir e gerenciar políticas que controlam ou auditam os recursos. Essas políticas impõem diferentes regras sobre as configurações dos recursos, de modo que essas configurações permaneçam em conformidade com os padrões corporativos.
+
+        - As políticas são aplicadas aos recursos usando grupos de gerenciamento.
+
+        Etapas
+            1 - Criar definições de política
+            2 - Criar uma definição de iniciativa
+            3 - Definir o escopo da definição da iniciativa
+            4 - Determinar a conformidade
+
+        Grupos de Gerenciamento
+            Os grupos de gerenciamento do Azure oferecem um nível de escopo e controle acima das assinaturas. Você pode usar grupos de gerenciamento como contêineres para gerenciar o acesso, a política e a conformidade entre suas assinaturas.
+
+            - Por padrão, todas as novas assinaturas são colocadas no grupo de gerenciamento de nível superior, ou grupo raiz.
+
+            - Todas as assinaturas dentro de um grupo de gerenciamento herdam automaticamente as condições aplicadas ao grupo de gerenciamento.
+
+            - Uma árvore do grupo de gerenciamento pode dar suporte a até 6 níveis de profundidade.
+
+            *Um grupo de gerenciamento tem uma ID (identificador exclusivo) de diretório e um nome de exibição. A ID é usada para enviar comandos no grupo de gerenciamento. O valor da ID não pode ser alterado depois de criado porque é usado em todo o sistema do Azure para identificar o grupo de gerenciamento. O nome de exibição do grupo de gerenciamento é opcional e pode ser alterado a qualquer momento.
+
+            Casos de uso 
+                Tipos de recursos permitidos: especifique os tipos de recursos que podem ser implantados.
+                SKUs de VM permitidas: Especifique o conjunto de SKU de VM que podem ser implantados.
+                Locais permitidos: Restrinja os locais que podem ser implantados.
+                Exigir tag e seu valor: Aplicar ma tag obrigatória e seu valor.
+                Auditar se o serviço de Backup do Azure está habilitado para todas as VMs.
+
             Remediação
-                Criar uma policy para ajustar o que já está incorreto
-        Tipos de recursos permitidos - especifique os tipos de recursos que podem ser implantados
-        SKUs de VM permitidas - especifique o conjunto de SKU de VM que podem ser implantados
-        Locais permitidos - retrinja os locais que podem ser implantados
-        Exigir tag e seu valor - aplicar ma tag obrigatória e seu valor
-        Auditar se o serviço de Backup do Azure está habilitado para todas as VMs
+                Criar uma policy para ajustar o que já está incorreto.
 
-    Definições de Política
-        Definições disponíveis do Azure
-        Importar do GitHub
-        Formato JSON específico
-        Criar definições de políticas personalizadas
+        
+        Definições de Política
+            Descreve as condições de conformidade de um recurso e as ações a serem concluídas quando as condições forem atendidas.
+            
 
-    Definições de Iniciativa
-        Grupo de políticas (1 ou mais políticas)
+        Definições de Iniciativa
+            Grupo de políticas (1 ou mais políticas).
+            Uma ou mais definições de política são agrupadas em uma definição de iniciativa.
 
-    Determinar a conformidade
+            Após a criação da definitiva, é necessário atribuir a iniciativa para estabelecer o escopo das políticas. O escopo determina quais recuros ou agrupamento de recursos são afetados pelas condições das políticas.
+
+
+        Determinar a conformidade
+            Nessa estapa, são avaliadas as condições das políticas em relação aos recursos com escopo. Ou seja, apresenta um dashboard com a porcentagem e números de políticas em conformidade ou não.
