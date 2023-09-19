@@ -1,0 +1,71 @@
+ARM - Azure Resource Manager (Gerenciador de Recursos do Azure)
+
+    Resource Manager
+        O ARM fornece uma camada de gerenciamento para realizar tarefas por meio do Azure PowerShell, CLI do Azure, portal do Azure, API REST e SDKs de cliente.
+
+        - Permite trabalhar com os recursos da sua solução como um grupo.
+        - Implante, atualize ou exclua em uma única operação coordenada.
+        - Fornece recursos de segurança, auditoria e marcação.
+
+
+    Terminologia do Azure
+        Resource (Recurso):
+            Um item gerenciável que está disponível por meio do Azure.
+        
+        Resource Group (Grupo de recursos):
+            Um contêiner lógico que mantém os recursos agrupados.
+
+        Provedor de recursos:
+            Serviço que fornece os recursos que você pode implantar e gerenciar por meio do ARM. Exemplo: MS Compute que fornece as VMs, MS Storage que fornece conta de armazenamento e MS Web que fornece recursos relacionados aos apps web.
+
+        ARM:
+            É um modelo, template, arquivo JSON que define um ou mais recursos a serem implantados em um grupo de recursos.
+
+        Sintaxe declarativa:
+            Permite a declaração "Isso é o que pretendo criar" sem precisar escrever a sequência de comandos de programação para criá-la.
+
+
+    Implantações de grupos de recursos
+        Os recursos podem ser implantados em qualquer grupo de recursos novo ou existente.
+
+        - Recursos somente podem existir em um grupo de recursos.
+        - Recursos só podem existir em um grupo de recursos.
+        - Grupos de recursos não podem ser renomeados.
+        - Grupos de recursos podem ter recursos de vários tipos diferentes (serviços).
+        - Grupos de recursos podem ter recursos de várias regiõs diferentes.
+
+
+    Bloqueios do Gerenciador de Recursos (Resource Locks)
+        Os recursos provisionados no Azure podem ser facilmente excluídos. Os bloqueios do Resource Manager (resources locks) permitem que as organizações coloquem uma estrutura em vigor que impede uma exclusão acidental de recursos no Azure.
+
+        - Pode associar o bloqueio a uma assinatura, grupo de recursos ou recurso.
+        - Os bloqueios são herdados por recursos filho.
+
+        Tipos de bloqueios
+            - Bloqueios somente leitura (read only): que impedem qualquer alteração no recurso.
+            - Bloqueio de exclusão (delete): que impede a exclusão.
+
+    Movendo recursos
+        Às vezes, você precisará mover recursos para uma nova assinatura ou para um novo grupo de recursos na mesma assinatura.
+
+        - O grupo de origem e o grupo de destino ficam bloqueados durante a operação de movimentação de recursos.
+        
+        - As operações de gravação e exclusão são bloqueadas nos grupos de recursos até que a migração seja concluída. Esse bloqueio significa que você não pode adicionar, atualizar nem excluir os recursos nos grupos de recursos.
+        
+        - Os bloqueios não significam que os recursos não estão disponíveis. Por exemplo, se você mover uma máquina virtual para um novo grupo de recursos, um aplicativo ainda poderá acessar a máquina virtual.
+
+        Serviços que não podem ser movidos:
+            Azure ADDS, ExpressRoute e Site Recore
+
+
+    Removendo recursos e grupos de recursos
+        Excluir um grupo de recursos, exclui todos os recursos contidos nele.
+
+
+    Limites de recursos
+        Exibe o uso de recursos em relação aos limites. Isso é útil para acompanhar o uso atual e planejar o uso futuro.
+
+        - Os limites mostrados são os limites da sua assinatura.
+        - Quando você precisar aumentar um limite padrão, haverá um link de Solicitação de Aumento.
+        - Todos os recursos têm um limite máximo listado nos limites do Azure.
+        - Se você estiver no limite máximo, o limite não poderá ser aumentado.
