@@ -1,0 +1,24 @@
+Azure Portal e Cloud Shell
+
+  Azure Portal
+    O portal do Azure permite criar, gerenciar e monitorar tudo, desde aplicativo web simples até aplicativos de nuvem em um só console unificado.
+    - Pesquisar recursos, serviços e documentos.
+    - Gerenciar recursos.
+    - Criar painéis personalizados e favoritos.
+    - Acessar o Cloud Shell.
+    - Receber notificações.
+    - Links para a documentação do Azure.
+
+  Azure Cloud Shell
+    É um shell interativo e acessível pelo navegador para o gerenciamento de recursos do Azure.
+    - Linux: optar pelo shell bash.
+    - Windows: optar pelo PowerShell.
+
+    Permite o acesso a uma experiência de linha de comando baseada em navegador, que foi criada em mente as tarefas de gerenciamento do Azure. Pode ser usado para trabalhar em modo independente de um computador local.
+
+      Recursos do Azure Cloud Shell
+        - É temporário (expira após 20min) e é fornecido por sessão e por usuário.
+        - Requer um resource group, storage account e compartilhamento de arquivos do Azure.
+        - Oferece um editor de texto gráfico integrado com base no Monaco Editor de código aberto.
+        - Autentica automaticamente para acesso instantâneio aos seus recursos.
+        - É executado em um host temporário forneceido por sessão e por usuário.
