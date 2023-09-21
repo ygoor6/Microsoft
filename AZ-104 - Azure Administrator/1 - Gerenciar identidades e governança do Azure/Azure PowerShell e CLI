@@ -10,3 +10,11 @@ Azure PowerShell
 
     Módulo AZ
       É o nome formal do módulo do Azure PowerShell que contém cmdlets para trabalhar com os recursos do Azure.
+
+      - Os cmdlets seguem uma convenção de nomenclatura verbo substantivo, enviados em módulos.
+      - Módulos são um arquivo DLL com o código para processar cada cmdlet.
+      - Carregue os cmdlets carregando o módulo.
+      - Use Get-Module para ver uma lista de módulos.
+
+CLI - Command Line Interface
+  
