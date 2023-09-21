@@ -1,0 +1,12 @@
+Azure PowerShell
+  É um modulo que é adicionado ao Windows PowerShell ou ao PowerShell Core para permitir que você se conecte à sua assinatura do azure e gerencie recursos.
+  - É necessário o PowerShell para funcionar.
+  - Permite conectar-se à sua assinatura do Azure para gerenciar recursos.
+  - Adiciona os comandos específocos do Azure módulo Az.
+  Também está disponível de duas maneiras: em um navegador por meio do Azure Cloud Shell ou com uma instalação local no sistema operacional Linux, macOS ou Windows.
+    Modos de uso:
+      Interativo: emite manualmente um comando por vez.
+      Script: executa um script que consiste em vários comandos.
+
+    Módulo AZ
+      É o nome formal do módulo do Azure PowerShell que contém cmdlets para trabalhar com os recursos do Azure.
