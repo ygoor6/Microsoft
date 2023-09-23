@@ -1,14 +1,14 @@
 Azure PowerShell
-  É um modulo que é adicionado ao Windows PowerShell ou ao PowerShell Core para permitir que você se conecte à sua assinatura do azure e gerencie recursos.
-    - É necessário o PowerShell para funcionar.
-    - Permite conectar-se à sua assinatura do Azure para gerenciar recursos.
-    - Adiciona os comandos específocos do Azure módulo Az.
-  Também está disponível de duas maneiras: em um navegador por meio do Azure Cloud Shell ou com uma instalação local no sistema operacional Linux, macOS ou Windows.
-    Modos de uso:
+    É um modulo que é adicionado ao Windows PowerShell ou ao PowerShell Core para permitir que você se conecte à sua assinatura do azure e gerencie recursos.
+      - É necessário o PowerShell para funcionar.
+      - Permite conectar-se à sua assinatura do Azure para gerenciar recursos.
+      - Adiciona os comandos específocos do Azure módulo Az.
+    Também está disponível de duas maneiras: em um navegador por meio do Azure Cloud Shell ou com uma instalação local no sistema operacional Linux, macOS ou Windows.
+      Modos de uso:
       Interativo: emite manualmente um comando por vez.
       Script: executa um script que consiste em vários comandos.
 
-    Módulo AZ
+      Módulo AZ
       É o nome formal do módulo do Azure PowerShell que contém cmdlets para trabalhar com os recursos do Azure.
 
       - Os cmdlets seguem uma convenção de nomenclatura verbo substantivo, enviados em módulos.
@@ -16,5 +16,9 @@ Azure PowerShell
       - Carregue os cmdlets carregando o módulo.
       - Use Get-Module para ver uma lista de módulos.
 
-CLI - Command Line Interface
-  
+Azure CLI - Command Line Interface
+    É um programa de linha de comando usado para conectar ao Azure e executar comandos administrativos nos recursos do Azure. É executado no Linux, macOS e no Windows e permite aos administradores e desenvolvedores executarem seus comandos usando um terminal, um prompt da linha de comando ou script em vez de navegador web.
+
+      - Interativo. Primeiro, para sistemas operacionais Windows, inicie um shell como cmd.exe ou, para Linux ou macOS, use o Bash. Em seguida, emita o comando no prompt do shell.
+
+      - Com script. Monte os comandos da CLI do Azure em um script de shell usando a sintaxe de script de seus shell preferido. Em seguida, execute o script.
