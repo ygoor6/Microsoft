@@ -1,0 +1,28 @@
+ARM Template
+    Um modelo do Azure Resource Manager define de modo preciso todos os recursos do Resource Manager em uma implantação.
+
+    Usar o ARM Template torna as implantações mais rápidas e mais passíveis de repetição.
+
+        - Melhora a consistência e facilita a reutilização.
+        - Reduza as tarefas manuais, propensas a erros e repetitivas.
+        - Expresse implantações complexas.
+        - Expresse requisitos por meio de códigos.
+        - Fornece tarefas de validação.
+        - Modular e pode ser vinculado.
+        - Simplifica a orquestração.
+
+        ARM Template
+            Development
+            Production
+            Quality Assurance
+
+    Template Schema
+        Os modelos do ARM são escritos em JSON, que permite exibir dados armazenados como um objeto em um texto. Um documento JSON é essencialmente uma coleção de pares chave-valor. Cada chave é uma cadeia de caracteres, cujo valor poderá ser:
+            - Uma cadeia de caracteres
+            - Um número
+            - Uma expressão booleana
+            - Uma lista de valores
+            - Um objeto
+
+    Parâmetros de modelos do ARM
+        Especifique quais valores são configurááveis quando o modelo é executado

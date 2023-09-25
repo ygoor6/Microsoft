@@ -16,9 +16,11 @@ Azure PowerShell
       - Carregue os cmdlets carregando o módulo.
       - Use Get-Module para ver uma lista de módulos.
 
-Azure CLI - Command Line Interface
+Azure CLI
     É um programa de linha de comando usado para conectar ao Azure e executar comandos administrativos nos recursos do Azure. É executado no Linux, macOS e no Windows e permite aos administradores e desenvolvedores executarem seus comandos usando um terminal, um prompt da linha de comando ou script em vez de navegador web.
 
       - Interativo. Primeiro, para sistemas operacionais Windows, inicie um shell como cmd.exe ou, para Linux ou macOS, use o Bash. Em seguida, emita o comando no prompt do shell.
 
       - Com script. Monte os comandos da CLI do Azure em um script de shell usando a sintaxe de script de seus shell preferido. Em seguida, execute o script.
+
+    Os comandos são estruturados em GRUPOS e SUBGRUPOS. Cada grupo representa um serviço fornecido pelo Azure, e os subgrupos dividem os comandos para esses serviços em agrupamentos lógicos. Por exemplo, o grupo storage contém subgrupos, incluindo conta, blob, compartilhamento e fila.

@@ -1,0 +1,12 @@
+Azure Bicep
+    É uma linguagem específica de domínio (DSL) que usa sintaxe declarativa para implantar recursos do Azure. Ele fornece uma sintaxe concisa, segurança de tipos confiavél e suporte para reutilização de código.
+
+    Você pode usar o Bicep em vez do JSON para desenvolver modelos do Azure Resource Manager (modelos do ARM). A sintaxe do JSON para criar um modelo do ARM pode ser detalhada e exigir expressões complicadas. A sintaxe do Bicep reduz essa complexidade e melhora a experiência de desenvolvimento. O Bicep é uma abstração transparente sobre o JSON do modelo do ARM e não perde nenhuma das funcionalidades do modelo JSON.
+
+        - Sintaxe mais simples para escrever modelos
+        - Arquivo de módolu menores que você pode referenciar a partir de um modelo principal
+        - Detecte automaticamente dependências entre seus recursos
+        - Extensão do Visual Studio Code com validação e IntelliSense
+
+        Como funciona?
+            Quando você implanta um recurso ou uma série de recursos do Azure, as ferramentas internas do Bicep convertem o modelo do Bicep em um modelo do JSON. Esse processo é conhecido como transpilação, que é o processo de converter o código-fonte escrito em uma linguagem para outra.
