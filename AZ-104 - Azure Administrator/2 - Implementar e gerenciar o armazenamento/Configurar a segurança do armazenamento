@@ -1,0 +1,26 @@
+SAS - Assinaturas de Acesso Compartilhado (Shared Acess Signatures)
+    Provê o acesso delegado aos recursos, garantindo acesso para os clintes sem compartilhar a chave da conta de armazenamento.
+
+    A conta SAS delega o acesso para os recursos em uma ou mais armazenamentos de serviços.
+
+    Delega acesso ao recurso uma vez.
+
+    Identificando URI e os parâmetros SAS:
+        Uma SAS é uma assinatura URI que aponta para um ou mais recursos de armazenamento. Consiste da URI de uma recurso de armazenamento e a SAS token.
+
+        URI:
+            Storage Resource: https://...
+            SAS token: ?sv=...
+
+    
+    Determinando um serviço de de criptografia
+
+        Gerenciada pela Microsoft:
+            Automaticamente a Azure gerencia a criptografia e descriptografia dos dados armazenados com um AES de 256 bits. É habilitado para todos os novos e amazenamentos existentes, sendo transaprente para os usuários e não pode ser desabilitado.
+
+        Gerenciado pelo cliente:
+            O cliente pode criar sua própria chave de criptografia e armazenar no Azure Key Vault para gerenciar as chaves de criptografia.
+
+            Pode também usar APIs do Azure Key Vault para gerar chaves.
+
+            Chaves customizadas permitem maior flexibilidade e controle.

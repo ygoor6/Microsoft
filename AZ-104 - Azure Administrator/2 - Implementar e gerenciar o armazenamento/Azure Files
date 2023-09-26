@@ -1,0 +1,5 @@
+Azure Files
+    Oferece compartilhamentos de arquivos totalmente gerenciados na nuvem que são acessíveis por meio do protocolo SMB (porta 445), do protoclo NFS (Network File System) e da API REST.
+
+    Os compartilhamentos podem ser montados de maneira simultânea por implantações locais ou na nuvem por servidores Windows (porta 445), Linux e MacOS (mapeamento do drive).
+

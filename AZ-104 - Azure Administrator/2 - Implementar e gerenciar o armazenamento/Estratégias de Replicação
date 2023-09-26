@@ -1,0 +1,26 @@
+Estratégias de Replicação
+
+    Apenas em 1 região:
+        LRS (Local Redundant Storage)
+            - 3 réplicas na mesma zona de disponibilidade (datacenter)
+            - Protege contra falhas no disco, node ou rack
+
+        ZRS - (Zone Redundant Storage)
+            - 3 réplicas em 3 zonas (datacenters) na mesma região.
+            - Escrita sincronizada para as 3 zonas.
+
+    Múltiplas regiões:
+        GRS (Geo Redundant Storage)
+            - 6 réplicas em 2 regiões diferentes (3 por região).
+            - Cada região a réplica é em uma zona.
+            - Cópia para o secundário de maneira assíncrona.
+
+        RA-GRS (Read Access Geo Redundant Storage)
+            - GRS + Acesso de leitura para o secundário
+
+        GZRS (Geo-Zone Redundant Storage)
+            - 6 réplicas em 2 regiões diferentes.
+            - 3 + 1 zonas, ou seja em uma região será replicado em 3 zonas e na outra, apenas em 1.
+
+        RA-GZRS (Read Access Geo-Zone Redundant Storage)
+            -GZRS + acesso de leitura para o secundário.

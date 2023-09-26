@@ -1,0 +1,9 @@
+Acesso ao armazenamento
+    Todo objeto tem um único endereço de URL, baseado no nome da conta e o tipo de armazenamento.
+
+        - Serviço de Container (blob): https://mystorageaccount.blob.core.windows.net
+        - Serviço de Tabela: https://mystorageaccount.table.core.windows.net
+        - Serviço de Fila: https://mystorageaccount.queue.core.windows.net
+        - Serviço de Arquivo: https://mystorageaccount.file.core.windows.net
+
+    Pode também ser configurado um nome de domínio customizado.

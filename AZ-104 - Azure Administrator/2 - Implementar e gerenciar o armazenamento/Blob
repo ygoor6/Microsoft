@@ -1,0 +1,36 @@
+Blob
+    É uma solução de armazenamento de objetos da Microsoft para a nuvem. O Armazenamento de Blobs é otimizado para armazenar grandes quantidades de dados não estruturados. Dados não estruturados são dados que não estão de acordo com uma definição ou um modelo de dados específico, como texto ou dados binários.
+
+    O Armazenamento de Blobs foi projetado para:
+
+        - Fornecimento de imagens ou de documentos diretamente a um navegador.
+        - Armazenamento de arquivos para acesso distribuído.
+        - Transmissão por streaming de áudio e vídeo.
+        - Gravando nos arquivo de log.
+        - Armazenamento de dados de backup e restauração, recuperação de desastres e arquivamento.
+        - Armazenamento de dados para análise por um serviço local ou hospedado no Azure.
+
+
+    Camadas de acesso
+        Hot:
+            Otimizado para acesso frequente dos objetos na conta de armazenamento.
+            - Mais caro para armazenar, porém mais barato para transacionar (manipular os arquivos, transação/leitura)
+    
+        Cool:
+            Otimizado para armazenar conjunto de dados em larga escala, acessandos de maneira infrequente e armazenados por menos de 30 dias.
+            - Mais barato o armazenamento, porém mais caro a leitura.
+    
+        Archive:
+            Otimizado para dados que podem tolerar muitas horas de recuperação e latência e vão permanecer arquivados por no mínimo 180 dias.
+            - Armazenamento mais barato, com um disco menos potente.
+
+
+    Regras de gerenciamento de ciclo de vida do Blob
+        Realiza a transição de blobs para um armazenamento com uma camada mais fria para otimizar a performance e o custo.
+
+        Deleta os arquivos no final do ciclo de vida.
+
+    Replicação de objeto
+        Permite a replicação apenas de um container, ao invés de replicar toda a conta de armazenamento (storage account).
+        - Otimiza o custo
+        - Otimiza a distribuição dos daos
