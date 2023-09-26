@@ -66,3 +66,23 @@ Azure Virtual Network
         * O peering pode ser realizado entre Vnets de outras regiões.
 
         * Em caso de uma nova sub-rede, ela não se comunicará com as sub-redes de uma outra vnet, para isso o recomendado é derrubar o peering, criar a sub-rede e recriar o peering.
+
+
+    Endereçamento IP
+        Os endereços IP privados:
+            Permitem a comunicação em uma rede virtual do Azure e na rede local. Você cria um endereço IP privado para o recurso ao usar um gateway de VPN ou um circuito do Azure ExpressRoute para estender a rede para o Azure.
+
+        Os endereços IP públicos:
+            Permitem que o recurso se comunique com a Internet. Você pode criar um endereço IP público para se conectar aos serviços voltados ao público do Azure.
+
+        - Os endereços IP podem ser atribuídos de maneira estática ou dinâmica.
+
+        - Você pode optar por separar os recursos de IP atribuídos dinâmica e estaticamente em sub-redes diferentes.
+         
+        - Os endereços IP estáticos não mudam e são mais adequados para determinadas situações, como:
+        
+            - Resolução de nomes DNS, em que uma alteração no endereço IP exige a atualização de registros de host.
+            - Modelos de segurança baseados em endereço IP que exigem que aplicativos ou serviços tenham um endereço IP estático.
+            - Certificados TLS/SSL vinculados a um endereço IP.
+            - Regras de firewall que permitem ou negam o tráfego usando intervalos de endereços IP.
+            - Máquinas virtuais baseadas em função, como controladores de domínio e servidores DNS.

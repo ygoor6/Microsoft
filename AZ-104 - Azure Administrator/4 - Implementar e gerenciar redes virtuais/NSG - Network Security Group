@@ -1,0 +1,28 @@
+NSG - Network Security Group
+    É possível usar um grupo de segurança de rede do Azure para filtrar o tráfego de rede entre os recursos do Azure em uma rede virtual do Azure. Um grupo de segurança de rede contém regras de segurança que permitem ou negam o tráfego de rede de entrada ou de saída em relação a vários tipos de recursos do Azure. Para cada regra, você pode especificar origem e destino, porta e protocolo.
+
+        - Um grupo de segurança de rede contém uma lista de regras de segurança que permitem ou negam o tráfego de rede de entrada ou de saída.
+
+        - Um grupo de segurança de rede pode ser associado a uma sub-rede ou a um adaptador de rede.
+
+        - Um grupo de segurança de rede pode ser associado várias vezes.
+
+        - Você cria um grupo de segurança de rede e define regras de segurança no portal do Azure.
+
+    O Azure cria várias regras de segurança padrão em cada grupo de segurança de rede, incluindo tráfego de entrada e tráfego de saída. Exemplos de regras padrão incluem tráfego DenyAllInbound e tráfego AllowInternetOutbound.
+
+    Você pode adicionar mais regras de segurança a um grupo de segurança de rede especificando condições para uma das seguintes configurações:
+
+    - Nome
+    - Prioridade
+    - Porta
+    - Protocolo (qualquer, TCP, UDP)
+    - Origem (qualquer, endereços IP, marca de serviço)
+    - Destino (qualquer, endereços IP, rede virtual)
+    - Ação (permitir ou negar)
+
+    Cada regra de segurança recebe um valor de prioridade. Todas as regras de segurança de um grupo de segurança de rede são processadas em ordem de prioridade. Quando uma regra tem um valor de prioridade baixo, a regra tem uma prioridade ou uma precedência mais alta em termos de ordem de processamento.
+
+    Não é possível remover as regras de segurança padrão.
+
+    Você pode substituir uma regra de segurança padrão criando outra regra de segurança que tenha uma configuração de prioridade mais alta para o grupo de segurança de rede.

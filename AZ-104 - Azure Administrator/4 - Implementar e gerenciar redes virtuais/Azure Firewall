@@ -1,0 +1,35 @@
+Azure Firewall
+    É um serviço de segurança de firewall de rede inteligente e nativo de nuvem que fornece o que há de melhor em proteçao contra ameaças para suas cargas de trabalho de nuvem.
+
+    É oferecido em três SKUs: Standard, Premium e Basic.
+
+        Standard:
+            Fornece filtragem L3-L7 e feeds de inteligência contra ameaças diretamente da Segurança Cibernética da Microsoft.
+
+            A filtragem baseada em inteligência contra ameaças pode alertar e negar o tráfego de/para domínios e endereços IP mal-intencionados conhecidos que são atualizados em tempo real para proteger contra ataques novos e emergentes.
+
+        Premium:
+            O Firewall do Azure Premium fornece funcionalidades avançadas que incluem IDPS baseado em assinatura para permitir a detecção rápida de ataques procurando padrões específicos. Esses padrões podem incluir sequências de bytes no tráfego de rede ou sequências de instruções mal-intencionadas conhecidas usadas por malwares. Há mais de 67.000 assinaturas em mais de 50 categorias que são atualizadas em tempo real para proteger contra explorações novas e emergentes. As categorias de exploração incluem malware, phishing, mineração de moedas e ataques de Troia.
+
+        Basic:
+            Destina-se a clientes de pequeno e médio porte (SMB) para proteger seus ambientes de nuvem do Azure. Ele fornece a proteção essencial que os clientes SMB precisam a um preço acessível.
+
+            O Firewall do Azure Básico é semelhante ao Firewall Standard, mas tem as seguintes limitações principais:
+
+                - Dá suporte somente ao modo de alerta da Inteligência contra Ameaças.
+                - Unidade de escala fixa para executar o serviço em duas instâncias de back-end de máquina virtual.
+                - Recomendado para ambientes com uma taxa de transferência estimada de 250 Mbps.
+    
+    Criando Azure Firewall
+        A Microsoft recomenda uma topologia de rede hub-spoke, que é um modelo baseado na conexão de origens e destinos através de um ponto intermediário. O nome do modelo é uma analogia ao eixo de uma bicicleta (hub) e os seus raios (spoke).
+
+        Cada ambiente é implantado em um spoke para manter o isolamento e os serviços são compartilhados são colocados na rede virtual do hub.
+
+    Criando Azure Firewall Rules
+        O Azure Firewall Manager centraliza o gerenciamento de firewall. As firewall policies são regras e configurações para controlar o acesso.
+
+        NAT rules vão permitir as conexões de entrada.
+
+        Network rules contém endereços de origem e destino, protocolos e portas de destino.
+
+        Applacion rules prove nomes de domínios qualificados (FQDNs) que podem ser acessados em uma sub-rede.
